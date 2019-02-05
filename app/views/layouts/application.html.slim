@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title MyBlog
+    = csrf_meta_tags 
+    = stylesheet_link_tag    'application', media: 'all' 
+    = javascript_include_tag 'application'   
+  
+    = p.load_templates 
+  body
+    header
+      .container
+        .row
+          .six.columns
+            #blog-logo Meu Super Blog
+            #blog-slogan O blog mais legal do dia
+          .six.columns
+            nav
+              ul
+                li 
+                  a href="/" Início
+                li
+                  a href="/posts/new" Adicionar post
+      
+
+    main#content.container = yield

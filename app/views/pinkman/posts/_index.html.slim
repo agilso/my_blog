@@ -1,0 +1,11 @@
+= p.template 'posts-index'
+  section
+    h1 Posts
+    p Conheça todos os meus super artigos
+    
+    .posts
+      = p.each
+        .post data-pinkey=p.pinkey
+          a.title href=p.w('routes.show') {{ title }}
+          a.edit-post href=p.w('routes.edit') Editar
+          button data-action='destroy-post' Excluir

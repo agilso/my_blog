@@ -1,0 +1,8 @@
+= p.partial 'post-form'
+  
+  = p.form 'post-form' do |f|
+  
+    = f.string 'title', 'Título'
+    = f.text 'body', 'Post'
+    
+    = f.submit 'Salvar'
