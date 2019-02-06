@@ -35,3 +35,18 @@ header {
   display: block;
   margin: 5px 0;
 }
+
+.comment {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #ddd;
+  border-radius: 3px;
+  margin: 10px 0;
+  .username {
+    color: tomato;
+    font-weight: bold;
+  }
+  .msg {
+    margin: 5px;
+  }
+}

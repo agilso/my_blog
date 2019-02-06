@@ -1,4 +1,24 @@
 = p.template 'posts-show'
   article
     h1 {{ title}}
-    .body {{ body}}
+    .body {{ body }}
+    
+    hr/
+  
+    section
+      h2 Comentários ({{ comments.count }})
+      .row
+        .six.columns
+          = p.wrap_in 'new_comment'
+            = p.form 'new-comment' do |f|
+              = f.string 'username', 'Nome'
+              = f.text 'msg', 'Seu Comentário'
+              = f.submit 'Adicionar'
+            
+        .six.columns
+          = p.wrap_in 'comments'
+            = p.each
+              .comment 
+                .username {{ username }}
+                .msg {{ msg }}
+              

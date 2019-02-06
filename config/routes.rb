@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
  
  	namespace :api do
+    resources :comments do
+      collection do 
+        get 'get(/:query)', action: 'get'
+        get 'search(/:query)', action: 'search'
+      end
+    end 
+    
     resources :posts do
       collection do 
         get 'get(/:query)', action: 'get'

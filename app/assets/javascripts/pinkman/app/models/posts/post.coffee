@@ -6,6 +6,12 @@ class window.Post extends AppObject
   
   constructor: (args...) ->
     super(args...)
+    
+    # Similar ao ruby de:
+    # has_many :comments
+    @comments = new Comments
+    @new_comment = new Comment
+    
     @routes =
       show: =>
         "/posts/#{@id}"

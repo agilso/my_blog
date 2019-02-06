@@ -8,4 +8,5 @@
         .post data-pinkey=p.pinkey
           a.title href=p.w('routes.show') {{ title }}
           a.edit-post href=p.w('routes.edit') Editar
+          span.comments-counter <b>{{ comments.count }}</b> comentários
           button data-action='destroy-post' Excluir

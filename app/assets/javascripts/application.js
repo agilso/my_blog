@@ -12,4 +12,5 @@
 //
 //= require rails-ujs
 //= require jquery
+//= require action_cable
 //= require my.pinkman.app
